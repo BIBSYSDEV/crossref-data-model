@@ -1,3 +1,5 @@
+package no.unit.crossref.model;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ApiResponse {
@@ -5,7 +7,7 @@ public class ApiResponse {
     private String status;
     @JsonProperty("message-type")
     private String messageType;
-    @JsonProperty("messageVersion")
+    @JsonProperty("message-version")
     private String messageVersion;
     @JsonProperty("message")
     private Message message;

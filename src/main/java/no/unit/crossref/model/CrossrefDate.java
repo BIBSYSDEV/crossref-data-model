@@ -1,20 +1,22 @@
+package no.unit.crossref.model;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class CrossrefDate {
     @JsonProperty("date-parts")
-    private List<DateParts> dateParts;
+    private int[][] dateParts;
     @JsonProperty("date-time")
     private String dateTime;
     @JsonProperty("timestamp")
-    private int timestamp;
+    private double timestamp;
 
-    public List<DateParts>getDateParts() {
+    public int[][] getDateParts() {
         return dateParts;
     }
 
-    public void setDateParts(List<DateParts>input) {
+    public void setDateParts(int[][] input) {
         this.dateParts = input;
     }
 
@@ -26,11 +28,11 @@ public class CrossrefDate {
         this.dateTime = input;
     }
 
-    public int getTimestamp() {
+    public double getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(int input) {
+    public void setTimestamp(double input) {
         this.timestamp = input;
     }
 }

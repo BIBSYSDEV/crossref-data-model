@@ -1,3 +1,5 @@
+package no.unit.crossref.model;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class JournalIssue {

@@ -1,5 +1,8 @@
+package no.unit.crossref.model;
+
 public class DateParts {
 
+    /*
     int year;
     int month;
     int day;
@@ -27,4 +30,6 @@ public class DateParts {
     public void setDay(int day) {
         this.day = day;
     }
+
+     */
 }

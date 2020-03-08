@@ -1,4 +1,8 @@
+package no.unit.crossref.model;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.Arrays;
 
 public class Issn {
     @JsonProperty("value")
@@ -18,8 +22,8 @@ public class Issn {
         return type;
     }
 
-    public void setType(IssnType type) {
-        this.type = type;
+    public void setType(String type) {
+        this.type = IssnType.getType(type);
     }
 
     private enum IssnType {
@@ -30,6 +34,11 @@ public class Issn {
 
         IssnType(String name) {
             this.name = name;
+        }
+
+        public static IssnType getType(String name) {
+            return Arrays.stream(values()).filter(issnType -> issnType.name.equals(name)).findFirst()
+                    .orElseThrow(RuntimeException::new);
         }
 
         public String getName() {

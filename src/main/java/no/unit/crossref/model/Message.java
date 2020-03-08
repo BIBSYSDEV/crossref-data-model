@@ -1,3 +1,5 @@
+package no.unit.crossref.model;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
@@ -33,7 +35,7 @@ public class Message {
     @JsonProperty("is-referenced-by-count")
     private int isReferencedByCount;
     @JsonProperty("title")
-    private String title;
+    private String[] title;
     @JsonProperty("prefix")
     private String prefix;
     @JsonProperty("volume")
@@ -312,11 +314,11 @@ public class Message {
         this.isReferencedByCount = isReferencedByCount;
     }
 
-    public String getTitle() {
+    public String[] getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String[] title) {
         this.title = title;
     }
 
