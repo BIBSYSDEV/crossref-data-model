@@ -3,7 +3,8 @@ package no.unit.crossref;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import no.unit.crossref.model.ApiResponse;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -12,7 +13,7 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.concurrent.ExecutionException;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class Integration {
     static ObjectMapper objectMapper = new ObjectMapper();
